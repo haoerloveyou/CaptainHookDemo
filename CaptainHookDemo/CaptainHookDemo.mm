@@ -39,52 +39,34 @@
 @end
 
 
-@class ClassToHook;
+@class NSFileManager;
 
-CHDeclareClass(ClassToHook); // declare class
+CHDeclareClass(NSFileManager);
 
-CHOptimizedMethod(0, self, void, ClassToHook, messageName) // hook method (with no arguments and no return value)
+#pragma mark - NSFileManager Hooker
+
+CHOptimizedMethod(1, self, BOOL, NSFileManager, fileExistsAtPath, NSString*, arg1)
 {
-	// write code here ...
-	
-	CHSuper(0, ClassToHook, messageName); // call old (original) method
+	NSLog(@"detect Path : %@", arg1);
+	return CHSuper(1, NSFileManager, fileExistsAtPath, arg1);
 }
 
-CHOptimizedMethod(2, self, BOOL, ClassToHook, arg1, NSString*, value1, arg2, BOOL, value2) // hook method (with 2 arguments and a return value)
+CHOptimizedClassMethod(0, self, id, NSFileManager, defaultManager)
 {
-	// write code here ...
-
-	return CHSuper(2, ClassToHook, arg1, value1, arg2, value2); // call old (original) method and return its return value
+    NSLog(@"call Class Method : + (id)defaultManager");
+    return CHSuper(0, NSFileManager, defaultManager);
 }
 
-static void WillEnterForeground(CFNotificationCenterRef center, void *observer, CFStringRef name, const void *object, CFDictionaryRef userInfo)
-{
-	// not required; for example only
-}
-
-static void ExternallyPostedNotification(CFNotificationCenterRef center, void *observer, CFStringRef name, const void *object, CFDictionaryRef userInfo)
-{
-	// not required; for example only
-}
+#pragma mark - CHConstructor
 
 CHConstructor // code block that runs immediately upon load
 {
 	NSAutoreleasePool *pool = [[NSAutoreleasePool alloc] init];
-	
-	// listen for local notification (not required; for example only)
-	CFNotificationCenterRef center = CFNotificationCenterGetLocalCenter();
-	CFNotificationCenterAddObserver(center, NULL, WillEnterForeground, CFSTR("UIApplicationWillEnterForegroundNotification"), NULL, CFNotificationSuspensionBehaviorCoalesce);
-	
-	// listen for system-side notification (not required; for example only)
-	// this would be posted using: notify_post("com.zerox.CaptainHookDemo.eventname");
-	CFNotificationCenterRef darwin = CFNotificationCenterGetDarwinNotifyCenter();
-	CFNotificationCenterAddObserver(darwin, NULL, ExternallyPostedNotification, CFSTR("com.zerox.CaptainHookDemo.eventname"), NULL, CFNotificationSuspensionBehaviorCoalesce);
-	
-	// CHLoadClass(ClassToHook); // load class (that is "available now")
-	// CHLoadLateClass(ClassToHook);  // load class (that will be "available later")
-	
-	CHHook(0, ClassToHook, messageName); // register hook
-	CHHook(2, ClassToHook, arg1, arg2); // register hook
+    
+	CHLoadLateClass(NSFileManager);  // load class (that will be "available later")
+    
+    CHHook(1, NSFileManager, fileExistsAtPath); // register hook
+    CHHook(0, NSFileManager, defaultManager);
 	
 	[pool drain];
 }
