@@ -1,0 +1,322 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		ABCA11C91731215C00E7F8D0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ABCA11C81731215C00E7F8D0 /* Foundation.framework */; };
+		ABCA11D31731215C00E7F8D0 /* CaptainHookDemo.mm in Sources */ = {isa = PBXBuildFile; fileRef = ABCA11D21731215C00E7F8D0 /* CaptainHookDemo.mm */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		ABCA11C51731215C00E7F8D0 /* CaptainHookDemo.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = CaptainHookDemo.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
+		ABCA11C81731215C00E7F8D0 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		ABCA11CD1731215C00E7F8D0 /* control.txt */ = {isa = PBXFileReference; lastKnownFileType = text; name = control.txt; path = Package/DEBIAN/control.txt; sourceTree = "<group>"; };
+		ABCA11CE1731215C00E7F8D0 /* control */ = {isa = PBXFileReference; lastKnownFileType = text; name = control; path = Package/DEBIAN/control; sourceTree = "<group>"; };
+		ABCA11D01731215C00E7F8D0 /* PackageVersion.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = PackageVersion.plist; sourceTree = "<group>"; };
+		ABCA11D11731215C00E7F8D0 /* CaptainHookDemo-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CaptainHookDemo-Prefix.pch"; sourceTree = "<group>"; };
+		ABCA11D21731215C00E7F8D0 /* CaptainHookDemo.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = CaptainHookDemo.mm; sourceTree = "<group>"; };
+		ABCA11D71731215C00E7F8D0 /* CaptainHookDemo.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = CaptainHookDemo.plist; path = Package/Library/MobileSubstrate/DynamicLibraries/CaptainHookDemo.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		ABCA11C11731215C00E7F8D0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ABCA11C91731215C00E7F8D0 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		ABCA11BB1731215C00E7F8D0 = {
+			isa = PBXGroup;
+			children = (
+				ABCA11CA1731215C00E7F8D0 /* CaptainHookDemo */,
+				ABCA11C71731215C00E7F8D0 /* Frameworks */,
+				ABCA11C61731215C00E7F8D0 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		ABCA11C61731215C00E7F8D0 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				ABCA11C51731215C00E7F8D0 /* CaptainHookDemo.dylib */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		ABCA11C71731215C00E7F8D0 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				ABCA11C81731215C00E7F8D0 /* Foundation.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		ABCA11CA1731215C00E7F8D0 /* CaptainHookDemo */ = {
+			isa = PBXGroup;
+			children = (
+				ABCA11D21731215C00E7F8D0 /* CaptainHookDemo.mm */,
+				ABCA11CB1731215C00E7F8D0 /* Package */,
+				ABCA11CF1731215C00E7F8D0 /* Supporting Files */,
+			);
+			path = CaptainHookDemo;
+			sourceTree = "<group>";
+		};
+		ABCA11CB1731215C00E7F8D0 /* Package */ = {
+			isa = PBXGroup;
+			children = (
+				ABCA11CC1731215C00E7F8D0 /* DEBIAN */,
+				ABCA11D41731215C00E7F8D0 /* Library */,
+			);
+			name = Package;
+			sourceTree = "<group>";
+		};
+		ABCA11CC1731215C00E7F8D0 /* DEBIAN */ = {
+			isa = PBXGroup;
+			children = (
+				ABCA11CD1731215C00E7F8D0 /* control.txt */,
+				ABCA11CE1731215C00E7F8D0 /* control */,
+			);
+			name = DEBIAN;
+			sourceTree = "<group>";
+		};
+		ABCA11CF1731215C00E7F8D0 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				ABCA11D01731215C00E7F8D0 /* PackageVersion.plist */,
+				ABCA11D11731215C00E7F8D0 /* CaptainHookDemo-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		ABCA11D41731215C00E7F8D0 /* Library */ = {
+			isa = PBXGroup;
+			children = (
+				ABCA11D51731215C00E7F8D0 /* MobileSubstrate */,
+			);
+			name = Library;
+			sourceTree = "<group>";
+		};
+		ABCA11D51731215C00E7F8D0 /* MobileSubstrate */ = {
+			isa = PBXGroup;
+			children = (
+				ABCA11D61731215C00E7F8D0 /* DynamicLibraries */,
+			);
+			name = MobileSubstrate;
+			sourceTree = "<group>";
+		};
+		ABCA11D61731215C00E7F8D0 /* DynamicLibraries */ = {
+			isa = PBXGroup;
+			children = (
+				ABCA11D71731215C00E7F8D0 /* CaptainHookDemo.plist */,
+			);
+			name = DynamicLibraries;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		ABCA11C21731215C00E7F8D0 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		ABCA11C41731215C00E7F8D0 /* CaptainHookDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = ABCA11DA1731215C00E7F8D0 /* Build configuration list for PBXNativeTarget "CaptainHookDemo" */;
+			buildPhases = (
+				ABCA11C01731215C00E7F8D0 /* Sources */,
+				ABCA11C11731215C00E7F8D0 /* Frameworks */,
+				ABCA11C21731215C00E7F8D0 /* Headers */,
+				ABCA11C31731215C00E7F8D0 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CaptainHookDemo;
+			productName = CaptainHookDemo;
+			productReference = ABCA11C51731215C00E7F8D0 /* CaptainHookDemo.dylib */;
+			productType = "com.apple.product-type.library.dynamic";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		ABCA11BC1731215C00E7F8D0 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0460;
+			};
+			buildConfigurationList = ABCA11BF1731215C00E7F8D0 /* Build configuration list for PBXProject "CaptainHookDemo" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = ABCA11BB1731215C00E7F8D0;
+			productRefGroup = ABCA11C61731215C00E7F8D0 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				ABCA11C41731215C00E7F8D0 /* CaptainHookDemo */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		ABCA11C31731215C00E7F8D0 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/opt/iOSOpenDev/bin/iosod --xcbp";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		ABCA11C01731215C00E7F8D0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ABCA11D31731215C00E7F8D0 /* CaptainHookDemo.mm in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		ABCA11D81731215C00E7F8D0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				EXCLUDED_RECURSIVE_SEARCH_PATH_SUBDIRECTORIES = "*.nib *.lproj *.gch (*) .DS_Store CVS .svn .git .hg *.xcodeproj *.xcode *.pbproj *.pbxproj";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(iOSOpenDevPath)/frameworks/**",
+					"$(SDKROOT)/System/Library/PrivateFrameworks",
+				);
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = "$(iOSOpenDevPath)/include/**";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				LIBRARY_SEARCH_PATHS = "$(iOSOpenDevPath)/lib/**";
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = NO;
+				iOSOpenDevPath = /opt/iOSOpenDev;
+			};
+			name = Debug;
+		};
+		ABCA11D91731215C00E7F8D0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = YES;
+				EXCLUDED_RECURSIVE_SEARCH_PATH_SUBDIRECTORIES = "*.nib *.lproj *.gch (*) .DS_Store CVS .svn .git .hg *.xcodeproj *.xcode *.pbproj *.pbxproj";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(iOSOpenDevPath)/frameworks/**",
+					"$(SDKROOT)/System/Library/PrivateFrameworks",
+				);
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = "$(iOSOpenDevPath)/include/**";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				LIBRARY_SEARCH_PATHS = "$(iOSOpenDevPath)/lib/**";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				iOSOpenDevPath = /opt/iOSOpenDev;
+			};
+			name = Release;
+		};
+		ABCA11DB1731215C00E7F8D0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "CaptainHookDemo/CaptainHookDemo-Prefix.pch";
+				INSTALL_PATH = /Library/MobileSubstrate/DynamicLibraries;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				iOSOpenDevBuildPackageOnAnyBuild = NO;
+				iOSOpenDevCopyOnBuild = NO;
+				iOSOpenDevDevice = "";
+				iOSOpenDevInstallOnAnyBuild = NO;
+				iOSOpenDevInstallOnProfiling = YES;
+				iOSOpenDevRespringOnInstall = YES;
+				iOSOpenDevUsePackageVersionPList = YES;
+			};
+			name = Debug;
+		};
+		ABCA11DC1731215C00E7F8D0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "CaptainHookDemo/CaptainHookDemo-Prefix.pch";
+				INSTALL_PATH = /Library/MobileSubstrate/DynamicLibraries;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				iOSOpenDevBuildPackageOnAnyBuild = NO;
+				iOSOpenDevCopyOnBuild = NO;
+				iOSOpenDevDevice = "";
+				iOSOpenDevInstallOnAnyBuild = NO;
+				iOSOpenDevInstallOnProfiling = YES;
+				iOSOpenDevRespringOnInstall = YES;
+				iOSOpenDevUsePackageVersionPList = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		ABCA11BF1731215C00E7F8D0 /* Build configuration list for PBXProject "CaptainHookDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				ABCA11D81731215C00E7F8D0 /* Debug */,
+				ABCA11D91731215C00E7F8D0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		ABCA11DA1731215C00E7F8D0 /* Build configuration list for PBXNativeTarget "CaptainHookDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				ABCA11DB1731215C00E7F8D0 /* Debug */,
+				ABCA11DC1731215C00E7F8D0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = ABCA11BC1731215C00E7F8D0 /* Project object */;
+}
